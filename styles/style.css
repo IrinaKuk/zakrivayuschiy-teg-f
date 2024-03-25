@@ -15,6 +15,7 @@
 */
 
 .page {
+  font-variation-settings: "wght" 400;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   padding-top: 100px;
@@ -75,7 +76,7 @@
   text-transform: uppercase;
   border: none;
   outline: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .theme-menu__button::before {
@@ -106,7 +107,7 @@
   width: 0%;
   height: 2px;
   background-color: var(--accent-color);
-  transition: all 0.5s;
+  transition: 0.5s;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -211,13 +212,6 @@
   }
 }
 
-.like-icon {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-}
-
 .card__like-button {
   position: relative;
   cursor: pointer;
@@ -230,7 +224,7 @@
   border: 2px solid var(--accent-color);
   font-size: 14px;
   line-height: 90%;
-  transition: all 0.5s;
+  transition: 0.5s;
   width: 130px;
   height: 38px;
   overflow: hidden;
@@ -292,9 +286,24 @@
   transition: 0.5s ease-in-out;
 }
 
-.card__icon-button:hover {
+.card__icon-button:hover .main-body {
   fill: var(--accent-color);
   transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill .3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--color-heart);
+  transition: fill .3s linear .05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--color-heart);
+  transition: fill .3s linear;
 }
 
 .button__text {
@@ -317,15 +326,6 @@
   transition: fill 0.3s linear;
 }
 
-.heart:hover .core {
-  fill: var(--accent-color);
-  transition: fill 0.3s linear;
-}
-
-.is-liked .heart {
-  animation: like-skale 0.3s ease-in 0.1s alternate;
-}
-
 .like-icon.is-liked .main-body {
   fill: var(--color-heart);
   transition: fill 0.3s linear 0.05s;
@@ -338,12 +338,6 @@
 
 .is-liked .sparks {
   animation: like-shine 0.3s ease-in 0.3s alternate;
-}
-
-.heart:hover .main-body {
-  fill: var(--accent-color);
-  transition-delay: 0.05s;
-  transform: fill 0.3s;
 }
 
 .image-saturate {
@@ -397,7 +391,7 @@
   position: relative;
   margin: 52px auto 80px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: 0.5s;
   overflow: hidden;
 }
 
