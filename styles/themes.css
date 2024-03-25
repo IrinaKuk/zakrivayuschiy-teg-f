@@ -12,7 +12,7 @@
   --background-color: #fff;
   --accent-color: rgb(0 0 0);
   --accent-color-transparent: rgb(0 0 0 /60%);
-  --button-text-color: #fff;
+  --button-text-color: var(--background-color);
   --background-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
